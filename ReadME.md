@@ -15,7 +15,8 @@ sudo apt update
 Install the necessary packages and dependencies for the application using the following command:
 
 ```bash
-sudo apt install -y curl dirmngr apt-transport-https lsb-release ca-certificates
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
 ```
 
 ### 3. Install Node.js
@@ -23,8 +24,26 @@ sudo apt install -y curl dirmngr apt-transport-https lsb-release ca-certificates
 Install Node.js, a JavaScript runtime, with the following commands:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install -y nodejs
+nvm install 15
+nvm use 15
+```
+
+### 4. Check the versions
+
+Check the versions of installed softwares, with the following commands:
+
+```bash
+node -v
+npm-v
+```
+
+### 5. Clone the Repo
+
+Install git if not installed and clone the repository, with the following commands:
+
+```bash
+sudo apt install -y git
+git clone https://github.com/Sumanth484/Netflix-Clone.git
 ```
 
 ### 4. Install Project Dependencies
@@ -32,6 +51,7 @@ sudo apt install -y nodejs
 Navigate to the project directory and install the project-specific dependencies:
 
 ```bash
+cd Netflix-Clone
 npm install
 ```
 
